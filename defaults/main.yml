@@ -1,2 +1,7 @@
 ---
-# defaults file for yubikey
+# By default install GUI for YubiKey Personalization tool
+yubikey_personalization_gui: true
+
+# By default do not install YubiKey Neo Manager
+yubikey_neo_manager: false
+

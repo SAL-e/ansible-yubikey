@@ -1,2 +1,15 @@
 ---
-# tasks file for yubikey
+- name: add Yubico stable ppa repo
+  apt_repository: repo=ppa:yubico/stable state=present update_cache=yes
+
+- name: install yubikey-personalization tool
+  apt: pkg=yubikey-personalizationtool state=present
+
+- name: install yubikey-personalization-gui
+  apt: pkg=yubikey-personalizationtool-gui state=present
+  when: yubikey_personalization_gui
+
+- name: install yubikey-neo-manager
+  apt: pkg=yubikey-neo-manager state=present
+  when: yubikey_neo_manager
+
