@@ -1,19 +1,12 @@
 ---
 galaxy_info:
-  author: your name
-  description: 
-  company: your company (optional)
+  author: Svetoslav Trochev
+  description: Ansible role to install and support yubikey from Yubico.
+  company:
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
-  # issue_tracker_url: http://example.com/issue/tracker
-  # Some suggested licenses:
-  # - BSD (default)
-  # - MIT
-  # - GPLv2
-  # - GPLv3
-  # - Apache
-  # - CC-BY
-  license: license (GPLv2, CC-BY, etc)
+  # issue_tracker_url: https://github.com/SAL-e/ansible-yubikey/issues
+  license: GPLv2
   min_ansible_version: 1.2
   #
   # Below are all platforms currently available. Just uncomment
@@ -78,9 +71,9 @@ galaxy_info:
   #  - 9.1
   #  - 9.1
   #  - 9.2
-  #- name: Ubuntu
-  #  versions:
-  #  - all
+  - name: Ubuntu
+    versions:
+    - all
   #  - lucid
   #  - maverick
   #  - natty
@@ -117,7 +110,7 @@ galaxy_info:
   # Below are all categories currently available. Just as with
   # the platforms above, uncomment those that apply to your role.
   #
-  #categories:
+  categories:
   #- cloud
   #- cloud:ec2
   #- cloud:gce
@@ -130,7 +123,7 @@ galaxy_info:
   #- monitoring
   #- networking
   #- packaging
-  #- system
+  - system
   #- web
 dependencies: []
   # List your role dependencies here, one per line.
