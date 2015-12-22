@@ -3,10 +3,10 @@
   apt_repository: repo=ppa:yubico/stable state=present update_cache=yes
 
 - name: install yubikey-personalization tool
-  apt: pkg=yubikey-personalizationtool state=present
+  apt: pkg=yubikey-personalization state=present
 
 - name: install yubikey-personalization-gui
-  apt: pkg=yubikey-personalizationtool-gui state=present
+  apt: pkg=yubikey-personalization-gui state=present
   when: yubikey_personalization_gui
 
 - name: install yubikey-neo-manager
