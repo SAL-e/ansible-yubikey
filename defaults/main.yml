@@ -1,7 +1,14 @@
 ---
 # By default install GUI for YubiKey Personalization tool
+#   as 2022-11-22: It has been replaced by yubikey-manager-qt
 yubikey_personalization_gui: true
 
 # By default do not install YubiKey Neo Manager
 yubikey_neo_manager: false
+
+# By default do not install YubiKey Manager GUI
+yubikey_manager_qt: false
+
+# By default add YubiKey PPA (not realy needed on Ubuntu 22.10)
+yubikey_ppa: true
 

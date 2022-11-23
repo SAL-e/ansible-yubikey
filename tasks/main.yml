@@ -1,15 +1,20 @@
 ---
 - name: add Yubico stable ppa repo
   apt_repository: repo=ppa:yubico/stable state=present update_cache=yes
+  when: yubikey_ppa
 
 - name: install yubikey-personalization tool
   apt: pkg=yubikey-personalization state=present
 
 - name: install yubikey-personalization-gui
   apt: pkg=yubikey-personalization-gui state=present
-  when: yubikey_personalization_gui
+  when: yubikey_personalization_gui and not ((ansible_distribution == 'Ubuntu') and (ansible_distribution_version in ['22.10']))
 
 - name: install yubikey-neo-manager
   apt: pkg=yubikey-neo-manager state=present
   when: yubikey_neo_manager
+
+- name: install yubikey-manager-qt
+  apt: pkg=yubikey-manager-qt state=present
+  when: yubikey_manager_qt
 
