@@ -8,7 +8,7 @@
 
 - name: install yubikey-personalization-gui
   apt: pkg=yubikey-personalization-gui state=present
-  when: yubikey_personalization_gui and not ((ansible_distribution == 'Ubuntu') and (ansible_distribution_version in ['22.10', '23.04', '23.10']))
+  when: yubikey_personalization_gui and not ((ansible_distribution == 'Ubuntu') and (ansible_distribution_version in ['22.10', '23.04', '23.10', '24.04']))
 
 - name: install yubikey-neo-manager
   apt: pkg=yubikey-neo-manager state=present
